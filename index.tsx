@@ -9,11 +9,7 @@ interface Props {
     multiline?: boolean;
     text?: string;
     onChange?: (e) => void;
-    onEdit?: (index, isStart) => void;
     input?: boolean;
-    timepicker?: boolean;
-    index?: number;
-    isStart?: boolean;
 }
 
 export default function HybridText({
@@ -23,11 +19,7 @@ export default function HybridText({
     multiline,
     text,
     onChange,
-    onEdit,
     input,
-    timepicker,
-    index,
-    isStart,
 }: Props): JSX.Element {
     console.log('input:', text);
     return (
