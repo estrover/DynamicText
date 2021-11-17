@@ -1,8 +1,6 @@
 import React from 'react';
-import { View, Text, TextInput } from 'react-native';
-import { useTranslation } from 'react-i18next';
+import { View, Text } from 'react-native';
 import InputEditText from './InputEditText';
-import TimePicker from './TimePicker';
 
 interface Props {
     style?: React.CSSProperties;
@@ -31,7 +29,6 @@ export default function HybridText({
     index,
     isStart,
 }: Props): JSX.Element {
-    const { t } = useTranslation(['explore', 'attraction', 'bookmark', 'user_info', 'day', 'draw_content']);
     console.log('input:', text);
     return (
         <View>
@@ -41,13 +38,6 @@ export default function HybridText({
                     containerInputStyle={containerInputStyle}
                     inputStyle={inputStyle}
                     onChange={(e) => onChange(e)}
-                    text={text}
-                />
-            ) : timepicker ? (
-                <TimePicker
-                    index={index}
-                    isStart={isStart}
-                    onEdit={(index, isStart) => onEdit(index, isStart)}
                     text={text}
                 />
             ) : (
