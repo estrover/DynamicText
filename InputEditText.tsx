@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, TextInput } from 'react-native';
-import { useTranslation } from 'react-i18next';
-import { ToVH, ToVW } from '../Theme/Sizing';
+import { ToVH, ToVW } from './Sizing';
 
 interface Props {
     style?: React.CSSProperties;
@@ -13,7 +12,6 @@ interface Props {
 }
 
 export default function InputEditText({ containerInputStyle, inputStyle, multiline, text, onChange }: Props): JSX.Element {
-    const { t } = useTranslation(['explore', 'attraction', 'bookmark', 'user_info', 'day', 'draw_content']);
     return (
         <View
             style={{
