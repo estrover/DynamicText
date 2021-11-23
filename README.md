@@ -1,1 +1,1 @@
-# Component DynamicText for React Native;
+# Component DynamicText for React Native
